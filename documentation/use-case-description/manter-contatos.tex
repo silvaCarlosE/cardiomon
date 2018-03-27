@@ -1,0 +1,63 @@
+\subsection{Manter contatos}
+\begin{center}
+\begin{tabular}{ |p{7cm}|p{7cm}| } 
+ \hline
+ \textbf {Nome do caso de uso} & Manter contatos \\
+ \hline
+ \textbf{Descrição geral} & Caso de uso responsável por manter os contatos os quais receberão alertas de emergência. \\
+ \hline
+ \textbf{Ator Principal} & Usuário comum \\ 
+ \hline
+ \textbf{Atores Secundários} & Nenhum \\
+ \hline
+ \textbf{Resumo} & Esse caso de uso tem como finalidade adicionar, excluir, ler ou alterar os contatos salvos pelo usuário. \\
+ \hline
+ \textbf{Pré-Condições} & O login precisa ter sido realizado \\
+ \hline 
+ %-----------------------------------FLUXO DE EVENTOS
+ \multicolumn{2}{|c|}{\textbf{Fluxo pricipal de eventos} } \\
+ \hline
+ \textbf{Ações do ator} & \textbf{Ações do sistema} \\
+ \hline
+ \multicolumn{2}{|c|}{\textbf{Fluxo de cadastro de contatos} } \\
+ \hline 
+ Selecionar cadastrar contato & Mostrar tela de cadastro \\
+ \hline
+ Preencher formulário & \\
+ \hline
+ Clicar no botão “salvar” & Validar entrada de dados \\
+ \hline
+  & Salvar dados no banco \\
+ \hline
+ \multicolumn{2}{|c|}{\textbf{Fluxo de deleção de contatos} } \\
+ \hline 
+ Na tela de listagem de contatos opção excluir contato específico & Mostrar tela de confirmação exclusão \\
+ \hline
+ Confirmar exclusão & Verificar existência do contato e em seguida excluir \\
+ \hline
+ \multicolumn{2}{|c|}{\textbf{Fluxo de edição de contatos} } \\
+ \hline 
+ Na tela de listagem, clicar em alterar contato & Exibir tela de alteração de dados \\
+ \hline
+ Escolher contato e clicar no botão editar & Exibir tela de edição \\
+ \hline
+ Inserir dados a serem alterados & \\
+ \hline
+ Clicar no botão salvar & Validar as informações a serem alteradas\\
+ \hline
+  & Tela de confirmação de alteração \\
+ \hline
+ Confirmar no botão "Sim" & Salvar dados no banco \\
+ \hline
+ \multicolumn{2}{|c|}{\textbf{Fluxo de listagem de contatos} } \\
+ \hline 
+ Na aba contatos, opção listar contatos & Buscar dados no banco \\
+ \hline
+ & Exibir dados\\
+ \hline
+ \textbf{Pós condições} & Sem pós condições \\
+ \hline
+ \textbf{Observações} & Se houver inserção de dados inválida pelo usuário neste caso de uso, a aplicação irá exibir uma mensagem de erro\\
+ \hline
+\end{tabular}
+\end{center}

@@ -1,0 +1,37 @@
+\subsection{Enviar alertas de emergência}
+\begin{center}
+\begin{tabular}{ |p{7cm}|p{7cm}| } 
+ \hline
+ \textbf {Nome do caso de uso} & Enviar alertas de emergência\\
+ \hline
+ \textbf{Descrição geral} & Caso de uso para captação de interação do relógio e envio de mensagem de emergência \\
+ \hline
+ \textbf{Ator Principal} & Usuário comum \\ 
+ \hline
+ \textbf{Atores Secundários} & Nenhum \\
+ \hline
+ \textbf{Resumo} & Caso de uso responsável por captar a interação do usuário com o relógio e enviar uma mensagem para outra pessoa pedindo socorro. \\
+ \hline
+ \textbf{Pré-Condições} & O login precisa ter sido realizado \\
+ \hline 
+ %-----------------------------------FLUXO DE EVENTOS
+ \multicolumn{2}{|c|}{\textbf{Fluxo pricipal de eventos} } \\
+ \hline
+ \textbf{Ações do ator} & \textbf{Ações do sistema} \\
+ \hline
+ \multicolumn{2}{|c|}{\textbf{Fluxo de envio de alerta} } \\
+ \hline 
+ Apertar uma determinada quantidade de vezes no visor do smartwatch & Buscar dados de contatos no banco \\
+ \hline
+  & Buscar mensagem de alerta\\
+ \hline
+ & Preparar mensagem de envio\\
+ \hline
+ & Enviar requisição de mensagem \\
+ \hline
+ \textbf{Pós condições} & Nenhuma \\
+ \hline
+ \textbf{Observações} & Se não houver conexão com a internet, a aplicação irá exibir uma mensagem de erro. Também deve existir ao menos um contato e uma mensagem cadastrados.\\
+ \hline
+\end{tabular}
+\end{center}

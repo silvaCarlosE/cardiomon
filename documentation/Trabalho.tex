@@ -1,0 +1,409 @@
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	a4paper,			% tamanho do papel.
+	oneside, 
+	% -- opções da classe abntex2 --
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento	
+	]{abntex2}
+	
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\graphicspath{ {img/} }
+\usepackage{tabularx}
+% ---		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{ Uso de IOT para monitoramento cardíaco e envio de alertas de emergência através de smartwatch}
+\autor{CARLOS EDUARDO DA SILVA}
+\local{BOITUVA}
+\data{2018}
+\orientador{Daniel Cintra Cugler}
+\instituicao{%
+  Instituto Federal de São Paulo -- IFSP
+  \par
+  Tecnologia em Análise e Desenvolvimento de Sistemas}
+\tipotrabalho{Monografia}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Trabalho de conclusão do curso de Tecnologia em Análise 
+e desenvolvimento de sistemas no Instituto Federal de São Paulo, câmpus 
+Boituva.}
+% ---
+
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ---
+% Inserir a ficha bibliografica
+% ---
+
+% --- INSERIR FICHA CATALOGRÁFICA
+% ---
+% Inserir errata
+
+
+% ---
+% Inserir folha de aprovação
+% ---
+
+% ---
+
+% ---
+% Dedicatória
+% ---
+
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+
+
+\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{``Não vos amoldeis às estruturas deste mundo, \\
+		mas transformai-vos pela renovação da mente, \\
+		a fim de distinguir qual é a vontade de Deus: \\
+		o que é bom, o que Lhe é agradável, o que é perfeito.\\
+		(Bíblia Sagrada, Romanos 12, 2)}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+ 
+ \textbf{Palavras-chave}: Smartwatch, saúde, tecnologia vestível.
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+   This is the english abstract.
+
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Keywords}: Smartwatch. Health. Help.
+ \end{otherlanguage*}
+\end{resumo}
+
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\addcontentsline{lot}{table}{Requisitos não funcionais}
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+\begin{siglas}
+  \item[IFSP] Instituto Federal de São Paulo
+\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% ----------------------------------------------------------
+\chapter{Introdução}
+% ----------------------------------------------------------
+
+A saúde cardíaca da população mundial anda se deteriorando dia após dia. Existem muitas causas para esse problema, sendo elas hereditárias passados de geração a geração, provenientes de outros problemas de saúde como a obesidade. Um dos maiores problemas relativos a isso é que na maioria das vezes as pessoas não têm ciência do problema o qual possuem e acabam descobrindo da pior forma.
+
+Devemos sempre levar em consideração que o aumento de mortes por problemas cardíacos em muitas vezes ocorrem com pessoas que estão sozinhas em um momento ou não possuem nenhum familiar próximo. Quando o problema cardíaco aparece e o corpo entra em um estado crítico, pessoas não possuem uma maneira facilitada de socorro, acabam vindo a óbito precocemente por motivos como meios rápidos de se clamar por socorro que deveriam ser mais frequentemente pautados.
+
+Ajudar a população a tratar esse problema criando uma solução que engloba monitorar a saúde cardíaca com pedidos de socorro facilitados pode ajudar e muito na redução da mortalidade por problemas cardíacos, ajudando assim a baixar estatísticas de óbito. Existem muitas soluções no mercado porém são muito desacopladas e em modo geral não visam auxiliar o usuário no pedido de socorro a contatos determinados independente de onde o usuário esteja.
+
+Com a internet das coisas em contínua ascensão, pode-se vislumbrar uma nova solução de integração com os de um dispositivo vestível, nesse caso um smartwatch que possui funções de monitoramento cardíaco com um aplicativo. Os smartwatches estão ficando muito populares no mercado e a cada dia com mais funções. Eles estão fugindo do trivial, se integrando melhor com nossos smartphones, alcançando altos patamares de comunicação e em alguns casos obtendo preços extremamente mais acessíveis.
+
+Este projeto visa a integração de sensores de leitura de batimento cardíaco com outras aplicações para que assim a aplicação possa emitir alertas sobre os batimentos do usuário se necessário ou o próprio conseguir pedir ajuda facilmente em caso de emergência. Serão utilizadas tecnologias de desenvolvimento de aplicativos e o código seguirá o paradigma orientado a objetos.
+
+O documento é composto por vários capítulos e segue uma trajetória intuitiva a começar pela descrição geral do sistema, melhor entendimento do problema, os principais envolvidos e afetados por este projeto, usuários os quais a aplicação será destinada, as regras de negócio, requisitos necessários, documentação para abstração da solução em mais alto nível com uso de diagramas e conclusão e bibliografia.
+
+\chapter{Descrição do Problema}
+Resume-se como problema o fato de diversos seres humanos morrerem de ataques cardíacos sem mesmo saber que tinham problemas de saúde. A cada dia é mais comum chegar em nossas casas e saber que alguém próximo que aparentava perfeita saúde morreu de problemas no coração. Não somente a essas pessoas se destina a aplicação mas também a outras pessoas que já têm ciência de seus problemas e precisam constantemente de ajuda.
+
+O sistema será desenvolvido com o pensamento focado no usuário destinado. Usabilidade deverá ser o core da aplicação. O usuário poderá acompanhar seus batimentos cardíacos através do aplicativo, cadastrar contatos telefônicos os quais ele poderá disparar alertas, e ver seu histórico. Haverá também um módulo de integração com o smartwatch o qual permitirá que o usuário possa através de poucos toques no visor, disparar alertas de urgência.
+
+Para que o problema seja resolvido e uma solução plausível e realmente útil seja construída, precisará do apoio de pessoas relacionadas com a área da saúde e que entendam padrões de batimentos cardíacos e um desenvolvedor de software que ficará responsável por implementar a aplicação baseada nos requisitos.
+
+Para que a aplicação funcione, algumas regras de negócio devem ser levadas em consideração. Para que a coleta dos dados de batimento cardíaco seja feita, o smartwatch deve estar sempre em contato com a pele do usuário preferencialmente no pulso com seu visor virado para cima. A aplicação não deverá coletar dados que podem ser interpretados como lixo para o usuário ou até mesmo acarretar na dificuldade da visualização de um padrão consistente na tela de exibição de dados. Esses dados armazenados precisarão ser liberados depois de um certo período de tempo ou período de inatividade do usuário.
+
+% ---
+% Capitulo com exemplos de comandos inseridos de arquivo externo 
+% ---
+
+
+% ----------------------------------------------------------
+% Finaliza a parte no bookmark do PDF
+% para que se inicie o bookmark na raiz
+% e adiciona espaço de parte no Sumário
+% ----------------------------------------------------------
+\phantompart
+
+% ---
+% Conclusão
+% ---
+\chapter{Requisitos}
+Nesta seção serão descritos os requisitos funcionais do sistema, que por sua vez estão representados por um diagrama de caso de uso para fácil abstração das funcionalidades da aplicação, cada caso de uso acompanha um descritivo para entender ainda melhor seu fluxo de funcionamento e por fim os requisitos não funcionais do sistema.
+\section{Diagrama de caso de uso}
+\begin{figure}[h]
+	\label{figure_diagrama_caso_uso}
+	\caption{Diagrama de caso de uso} 
+	\includegraphics[scale=0.6]{UseCase.png}
+	\hfill
+\end{figure}
+\section{Descrição dos casos de uso}
+%
+\input{use-case-description/manter-mensagens}
+%
+\input{use-case-description/manter-contatos}
+%
+\input{use-case-description/exibir-historico-batimentos}
+%
+\input{use-case-description/enviar-alertas}
+%
+\input{use-case-description/autenticar-usuario}
+%
+\input{use-case-description/criar-conta}
+%
+\section{Requisitos não funcionais}
+%---
+\begin{center}
+\addcontentsline{lot}{table}{What is this doing?}
+\begin{tabular}{ |p{7cm}|p{7cm}| }
+ \hline
+ \textbf{IDRNF} & \textbf{Descrição do requisito não funcional} \\ [0.5ex] 
+ \hline
+ RNF001 & Deve ser feito ao menos um cadastro de usuário \\ 
+ \hline
+ RNF002 & Conexão com a internet 24x7 \\ 
+ \hline
+ RNF003 & O relógio deve estar sempre bem carregado \\ 
+ \hline
+ RNF004 & O relógio deve sempre estar em contato com a pele \\
+ \hline
+ RNF005 & O usuário deverá integrar somente os relógios aceitos pela aplicação \\
+ \hline
+ RNF006 & A aplicação deve enviar os dados com rapidez sem necessidade de outras interações
+  com o usuário \\
+  \hline
+ RNF007 & A aplicação deve permitir que o usuário faça o envio da mensagem de emergência com apenas uma ação \\
+ \hline
+\end{tabular}
+\end{center}
+
+% ---
+% Conclusão
+% ---
+\chapter{Conclusão}
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+% ----------------------------------------------------------
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\chapter{Referências bibliográficas}
+\bibliography{abntex2-modelo-references}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}
