@@ -2,20 +2,22 @@
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em recto e verso. Oposto a oneside
 	a4paper,			% tamanho do papel.
-	oneside, 
 	% -- opções da classe abntex2 --
-	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
 	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
-	brazil				% o último idioma é o principal do documento	
-	]{abntex2}
-	
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+]{abntex2}
+
 \usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}			% Usa a fonte Latin Modern			
+\renewcommand{\familydefault}{\sfdefault}			% Usa a fonte Latin Modern
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
@@ -25,7 +27,7 @@
 \usepackage{microtype} 			% para melhorias de justificação
 \graphicspath{ {img/} }
 \usepackage{tabularx}
-% ---		
+% ---
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -38,9 +40,9 @@
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
-% --- 
+% ---
 % CONFIGURAÇÕES DE PACOTES
-% --- 
+% ---
 
 % ---
 % Configurações do pacote backref
@@ -72,10 +74,10 @@
   \par
   Tecnologia em Análise e Desenvolvimento de Sistemas}
 \tipotrabalho{Monografia}
-% O preambulo deve conter o tipo do trabalho, o objetivo, 
-% o nome da instituição e a área de concentração 
-\preambulo{Trabalho de conclusão do curso de Tecnologia em Análise 
-e desenvolvimento de sistemas no Instituto Federal de São Paulo, câmpus 
+% O preambulo deve conter o tipo do trabalho, o objetivo,
+% o nome da instituição e a área de concentração
+\preambulo{Trabalho de conclusão do curso de Tecnologia em Análise
+e desenvolvimento de sistemas no Instituto Federal de São Paulo, câmpus
 Boituva.}
 % ---
 
@@ -90,24 +92,24 @@ Boituva.}
 \makeatletter
 \hypersetup{
      	%pagebackref=true,
-		pdftitle={\@title}, 
+		pdftitle={\@title},
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
+    	citecolor=blue,        		% color of links to aliography
     	filecolor=magenta,      		% color of file links
 		urlcolor=blue,
 		bookmarksdepth=4
 }
 \makeatother
-% --- 
+% ---
 
-% --- 
-% Espaçamentos entre linhas e parágrafos 
-% --- 
+% ---
+% Espaçamentos entre linhas e parágrafos
+% ---
 
 % O tamanho do parágrafo é dado por:
 \setlength{\parindent}{1.3cm}
@@ -130,7 +132,7 @@ Boituva.}
 \selectlanguage{brazil}
 
 % Retira espaço extra obsoleto entre as frases.
-\frenchspacing 
+\frenchspacing
 
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
@@ -202,7 +204,7 @@ Boituva.}
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
- 
+
  \textbf{Palavras-chave}: Smartwatch, saúde, tecnologia vestível.
 \end{resumo}
 
@@ -212,8 +214,8 @@ Boituva.}
    This is the english abstract.
 
    \vspace{\onelineskip}
- 
-   \noindent 
+
+   \noindent
    \textbf{Keywords}: Smartwatch. Health. Help.
  \end{otherlanguage*}
 \end{resumo}
@@ -268,6 +270,7 @@ Boituva.}
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
 \chapter{Introdução}
+\addcontentsline{toc}{chapter}{}
 % ----------------------------------------------------------
 
 A saúde cardíaca da população mundial anda se deteriorando dia após dia. Existem muitas causas para esse problema, sendo elas hereditárias passados de geração a geração, provenientes de outros problemas de saúde como a obesidade. Um dos maiores problemas relativos a isso é que na maioria das vezes as pessoas não têm ciência do problema o qual possuem e acabam descobrindo da pior forma.
@@ -283,6 +286,8 @@ Este projeto visa a integração de sensores de leitura de batimento cardíaco c
 O documento é composto por vários capítulos e segue uma trajetória intuitiva a começar pela descrição geral do sistema, melhor entendimento do problema, os principais envolvidos e afetados por este projeto, usuários os quais a aplicação será destinada, as regras de negócio, requisitos necessários, documentação para abstração da solução em mais alto nível com uso de diagramas e conclusão e bibliografia.
 
 \chapter{Descrição do Problema}
+\addcontentsline{arg}{arg}{arg}
+
 Resume-se como problema o fato de diversos seres humanos morrerem de ataques cardíacos sem mesmo saber que tinham problemas de saúde. A cada dia é mais comum chegar em nossas casas e saber que alguém próximo que aparentava perfeita saúde morreu de problemas no coração. Não somente a essas pessoas se destina a aplicação mas também a outras pessoas que já têm ciência de seus problemas e precisam constantemente de ajuda.
 
 O sistema será desenvolvido com o pensamento focado no usuário destinado. Usabilidade deverá ser o core da aplicação. O usuário poderá acompanhar seus batimentos cardíacos através do aplicativo, cadastrar contatos telefônicos os quais ele poderá disparar alertas, e ver seu histórico. Haverá também um módulo de integração com o smartwatch o qual permitirá que o usuário possa através de poucos toques no visor, disparar alertas de urgência.
@@ -292,7 +297,7 @@ Para que o problema seja resolvido e uma solução plausível e realmente útil 
 Para que a aplicação funcione, algumas regras de negócio devem ser levadas em consideração. Para que a coleta dos dados de batimento cardíaco seja feita, o smartwatch deve estar sempre em contato com a pele do usuário preferencialmente no pulso com seu visor virado para cima. A aplicação não deverá coletar dados que podem ser interpretados como lixo para o usuário ou até mesmo acarretar na dificuldade da visualização de um padrão consistente na tela de exibição de dados. Esses dados armazenados precisarão ser liberados depois de um certo período de tempo ou período de inatividade do usuário.
 
 % ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
+% Capitulo com exemplos de comandos inseridos de arquivo externo
 % ---
 
 
@@ -307,15 +312,18 @@ Para que a aplicação funcione, algumas regras de negócio devem ser levadas em
 % Conclusão
 % ---
 \chapter{Requisitos}
+\addcontentsline{arg}{arg}{arg}
 Nesta seção serão descritos os requisitos funcionais do sistema, que por sua vez estão representados por um diagrama de caso de uso para fácil abstração das funcionalidades da aplicação, cada caso de uso acompanha um descritivo para entender ainda melhor seu fluxo de funcionamento e por fim os requisitos não funcionais do sistema.
-\section{Diagrama de caso de uso}
+\chapter{Diagrama de caso de uso}
+\addcontentsline{arg}{arg}{arg}
 \begin{figure}[h]
 	\label{figure_diagrama_caso_uso}
-	\caption{Diagrama de caso de uso} 
+	\caption{Diagrama de caso de uso}
 	\includegraphics[scale=0.6]{UseCase.png}
 	\hfill
 \end{figure}
-\section{Descrição dos casos de uso}
+\chapter{Descrição dos casos de uso}
+\addcontentsline{arg}{arg}{arg}
 %
 \input{use-case-description/manter-mensagens}
 %
@@ -329,19 +337,20 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 %
 \input{use-case-description/criar-conta}
 %
-\section{Requisitos não funcionais}
+\chapter{Requisitos não funcionais}
+\addcontentsline{arg}{arg}{arg}
 %---
 \begin{center}
 \addcontentsline{lot}{table}{What is this doing?}
 \begin{tabular}{ |p{7cm}|p{7cm}| }
  \hline
- \textbf{IDRNF} & \textbf{Descrição do requisito não funcional} \\ [0.5ex] 
+ \textbf{IDRNF} & \textbf{Descrição do requisito não funcional} \\ [0.5ex]
  \hline
- RNF001 & Deve ser feito ao menos um cadastro de usuário \\ 
+ RNF001 & Deve ser feito ao menos um cadastro de usuário \\
  \hline
- RNF002 & Conexão com a internet 24x7 \\ 
+ RNF002 & Conexão com a internet 24x7 \\
  \hline
- RNF003 & O relógio deve estar sempre bem carregado \\ 
+ RNF003 & O relógio deve estar sempre bem carregado \\
  \hline
  RNF004 & O relógio deve sempre estar em contato com a pele \\
  \hline
@@ -355,10 +364,97 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 \end{tabular}
 \end{center}
 
+\chapter{Diagramas de sequência}
+%
+\section{Manter contatos}
+\begin{figure}[h]
+	\subsection{Alterar contato}
+	\label{figure_diagrama_sequencia_alterar_contato}
+	\caption{Diagrama de sequência: editar contatos}
+	\includegraphics[scale=0.6]{SequenceContatos/SequenceEditarContato.png}
+	\hfill
+\end{figure}
+%
+\begin{figure}
+	\subsection{Deletar contato}
+	\label{figure_diagrama_sequencia_deletar_contato}
+	\caption{Diagrama de sequência: deletar contatos}
+	\includegraphics[scale=0.6]{SequenceContatos/DeleteContatoSequence.png}
+	\hfill
+\end{figure}
+%
+\begin{figure}[h]
+	\subsection{Ver contato}
+	\label{figure_diagrama_sequencia_ver_contato}
+	\caption{Diagrama de sequência: ver contatos}
+	\includegraphics[scale=0.6]{SequenceContatos/VerContatos.png}
+	\hfill
+\end{figure}
+%
+\begin{figure}
+	\subsection{Criar contato}
+	\label{figure_diagrama_sequencia_criar_contato}
+	\caption{Diagrama de sequência: adicionar contatos}
+	\includegraphics[scale=0.6]{SequenceContatos/CriarContatoSequence.png}
+	\hfill
+\end{figure}
+
+\section{Manter mensagens}
+
+\begin{figure}[h]
+	\subsection{Alterar mensagem}
+	\label{figure_diagrama_sequencia_alterar_mensagem}
+	\caption{Diagrama de sequência: editar mensagens}
+	\includegraphics[scale=0.6]{SequenceMensagens/SequenceEditarMensagem.png}
+	\hfill
+\end{figure}
+%
+\begin{figure}
+	\subsection{Deletar mensagem}
+	\label{figure_diagrama_sequencia_deletar_mensagem}
+	\caption{Diagrama de sequência: deletar mensagens}
+	\includegraphics[scale=0.6]{SequenceMensagens/DeleteMessageSequence.png}
+	\hfill
+\end{figure}
+%
+\begin{figure}[h]
+	\subsection{Ver mensagem}
+	\label{figure_diagrama_sequencia_ver_mensagem}
+	\caption{Diagrama de sequência: ver mensagens}
+	\includegraphics[scale=0.6]{SequenceMensagens/VerMensagensSequence.png}
+	\hfill
+\end{figure}
+%
+\begin{figure}
+	\subsection{Criar mensagem}
+	\label{figure_diagrama_sequencia_criar_mensagem}
+	\caption{Diagrama de sequência: adicionar mensagens}
+	\includegraphics[scale=0.6]{SequenceMensagens/CriarMensagemSequence.png}
+	\hfill
+\end{figure}
+%
+\begin{figure}[h]
+	\subsection{Enviar alerta de emergência}
+	\label{figure_diagrama_sequencia_enviar_alerta_emergencia}
+	\caption{ Diagrama de sequência: enviar alerta de emergência }
+	\includegraphics[scale=0.6]{SequenceSmartwatch/Send_Alert.png}
+	\hfill
+\end{figure}
+
+\section{Diagramas de atividades}
+\begin{figure}[h]
+	\subsection{Enviar alerta de emergência}
+	\label{figure_diagrama_sequencia_enviar_alerta_emergencia}
+	\caption{ Diagrama de sequência: enviar alerta de emergência }
+	\includegraphics[scale=0.4]{ActivityDiagrams/Send_Message.png}
+	\hfill
+\end{figure}
+
 % ---
 % Conclusão
 % ---
 \chapter{Conclusão}
+\addcontentsline{arg}{arg}{arg}
 % ---
 
 % ----------------------------------------------------------
@@ -371,7 +467,7 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 % Referências bibliográficas
 % ----------------------------------------------------------
 \chapter{Referências bibliográficas}
-\bibliography{abntex2-modelo-references}
+\addcontentsline{arg}{arg}{arg}
 
 % ----------------------------------------------------------
 % Glossário
