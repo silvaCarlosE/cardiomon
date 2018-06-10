@@ -2,7 +2,7 @@
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em recto e verso. Oposto a oneside
+	oneside,			% para impressão em recto e verso. Oposto a oneside
 	a4paper,			% tamanho do papel.
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -366,90 +366,75 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 
 \chapter{Diagramas de sequência}
 %
-\section{Manter contatos}
-\begin{figure}[h]
-	\subsection{Alterar contato}
-	\label{figure_diagrama_sequencia_alterar_contato}
-	\caption{Diagrama de sequência: editar contatos}
-	\includegraphics[scale=0.6]{SequenceContatos/SequenceEditarContato.png}
-	\hfill
-\end{figure}
-%
-\begin{figure}
-	\subsection{Deletar contato}
-	\label{figure_diagrama_sequencia_deletar_contato}
-	\caption{Diagrama de sequência: deletar contatos}
-	\includegraphics[scale=0.6]{SequenceContatos/DeleteContatoSequence.png}
-	\hfill
-\end{figure}
-%
-\begin{figure}[h]
-	\subsection{Ver contato}
-	\label{figure_diagrama_sequencia_ver_contato}
-	\caption{Diagrama de sequência: ver contatos}
-	\includegraphics[scale=0.6]{SequenceContatos/VerContatos.png}
-	\hfill
-\end{figure}
-%
-\begin{figure}
-	\subsection{Criar contato}
-	\label{figure_diagrama_sequencia_criar_contato}
-	\caption{Diagrama de sequência: adicionar contatos}
-	\includegraphics[scale=0.6]{SequenceContatos/CriarContatoSequence.png}
-	\hfill
-\end{figure}
-
-\section{Manter mensagens}
-
-\begin{figure}[h]
-	\subsection{Alterar mensagem}
+\section{Manter mensagem}
+\begin{figure}[h]	
 	\label{figure_diagrama_sequencia_alterar_mensagem}
-	\caption{Diagrama de sequência: editar mensagens}
+	\subsection{Alterar mensagem}
 	\includegraphics[scale=0.6]{SequenceMensagens/SequenceEditarMensagem.png}
+	\caption{Diagrama de sequência: editar mensagens}
 	\hfill
 \end{figure}
 %
 \begin{figure}
-	\subsection{Deletar mensagem}
 	\label{figure_diagrama_sequencia_deletar_mensagem}
-	\caption{Diagrama de sequência: deletar mensagens}
+	\subsection{Deletar mensagem}	
 	\includegraphics[scale=0.6]{SequenceMensagens/DeleteMessageSequence.png}
+	\caption{Diagrama de sequência: deletar mensagens}
 	\hfill
 \end{figure}
 %
-\begin{figure}[h]
+\begin{figure}[h]	
+	\label{figure_diagrama_sequencia_ver_mensagem}	
 	\subsection{Ver mensagem}
-	\label{figure_diagrama_sequencia_ver_mensagem}
-	\caption{Diagrama de sequência: ver mensagens}
 	\includegraphics[scale=0.6]{SequenceMensagens/VerMensagensSequence.png}
+	\caption{Diagrama de sequência: ver mensagens}
 	\hfill
 \end{figure}
 %
-\begin{figure}
-	\subsection{Criar mensagem}
+\begin{figure}	
 	\label{figure_diagrama_sequencia_criar_mensagem}
-	\caption{Diagrama de sequência: adicionar mensagens}
+	\subsection{Criar mensagem}	
 	\includegraphics[scale=0.6]{SequenceMensagens/CriarMensagemSequence.png}
+	\caption{Diagrama de sequência: adicionar mensagens}
 	\hfill
 \end{figure}
 %
-\begin{figure}[h]
-	\subsection{Enviar alerta de emergência}
+\begin{figure}[h]	
 	\label{figure_diagrama_sequencia_enviar_alerta_emergencia}
+	\subsection{Enviar alerta de emergência}
 	\caption{ Diagrama de sequência: enviar alerta de emergência }
 	\includegraphics[scale=0.6]{SequenceSmartwatch/Send_Alert.png}
 	\hfill
 \end{figure}
 
-\section{Diagramas de atividades}
-\begin{figure}[h]
-	\subsection{Enviar alerta de emergência}
+\chapter{Diagramas de atividades}
+\section{Enviar alerta de emergência}	
+\begin{figure}[h]	
 	\label{figure_diagrama_sequencia_enviar_alerta_emergencia}
-	\caption{ Diagrama de sequência: enviar alerta de emergência }
 	\includegraphics[scale=0.4]{ActivityDiagrams/Send_Message.png}
+	\caption{ Diagrama de sequência: enviar alerta de emergência }
 	\hfill
 \end{figure}
-
+%
+\chapter{Diagramas de banco de dados}
+\section{Modelo relacional}
+\begin{figure}[h]	
+	\label{figure_relational_database}	
+	\includegraphics[scale=0.6]{Database/database.png}
+	\caption{ Modelo relacional }
+	\hfill
+\end{figure}
+%
+\chapter{Interfaces de usuário}
+\section{Histórico de batimentos cardíacos}
+\begin{figure}[h]	
+	\label{figure_cardiac_activity_history}	
+	\includegraphics[scale=0.8]{interfaces/cardiac_history.png}
+	\caption{ Histórico de batimentos cardíacos }
+	\hfill
+\end{figure}
+%
+\chapter{Cronograma do projeto}
 % ---
 % Conclusão
 % ---
