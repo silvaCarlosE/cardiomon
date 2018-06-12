@@ -274,11 +274,11 @@ Boituva.}
 
 O ritmo de vida da população acelera com o passar dos anos e com isso podemos ressaltar o estresse no trabalho e a má alimentação, que trazem diversos malefícios a saúde. Por conta disso, muitas pessoas acabam desenvolvendo problemas cardíacos. Se relacionada com as causas de problemas acima citadas, a hereditariedade se torna um fator de peso e gerando problemas na vida das pessoas e isso pode se agravar conforme o passar do tempo.
 
-De acordo com estatísticas da Organização Mundial de Saúde, anualmente cerca de 17,5 milhões de pessoas morrem por conta de doenças cardiovasculares \cite{oms-data}. Várias dessas pessoas que sofreram de problemas cardíacos moravam sozinhas, ou estavam em locais que não haviam outras pessoas as quais elas poderiam pedir socorro.
+De acordo com estatísticas da Organização Mundial de Saúde, anualmente cerca de 17,5 milhões de pessoas morrem por conta de doenças cardiovasculares. Várias dessas pessoas que sofreram de problemas cardíacos moravam sozinhas, ou estavam em locais que não haviam outras pessoas as quais elas poderiam pedir socorro.
 
-Com isso, o presente trabalho visa mitigar este problema criando uma solução que engloba o monitoramento cardíaco através de smartwatch e assim trazer um novo conceito para o envio alertas de emergência a ser realizado de maneira automática, assim trazendo um aumento na probabilidade de que a vítima do ataque saia sem sequelas e em muitos casos com sua vida poupada. O mercado hoje está muito aquecido quando citamos smartwatches no entanto as soluções existentes focam em um nicho específico, que visa melhorar a qualidade de vida e trazer mais mobilidade para as pessoas, fornecendo mais dados durante seus exercícios físicos, dados sobre horas dormidas e espelhamento de notificações do smartphone do usuário.
+Com isso, o presente trabalho visa ajudar a população a tratar esse problema criando uma solução que engloba monitorar a saúde cardíaca trazendo um novo conceito na hora de pedir socorro e enviar alertas de emergência, assim ajudando no aumento da probabilidade de que a vítima do ataque saia sem sequelas e em muitos casos com sua vida poupada. O mercado hoje está muito aquecido quando citamos smartwatches no entanto as soluções existentes focam em um nicho específico o qual visa melhorar a qualidade de vida das pessoas fornecendo mais dados durante seus exercícios físicos, espelhamento de notificações de seu smartphone e qualidade de sono.
 
-Com a internet das coisas em contínua ascensão, pode-se vislumbrar uma nova solução de integração com um smartwatch o qual possua a função de monitoramento cardíaco com a construção de um aplicativo. Os smartwatches estão ficando muito populares no mercado e a cada dia com mais funções, robustez, e um agradável custo benefício. Todos os dados sobre este usuário estarão também disponíveis em uma plataforma online.
+Com a internet das coisas em contínua ascensão, pode-se vislumbrar uma nova solução de integração com os de um dispositivo vestível, nesse caso um smartwatch que possui funções de monitoramento cardíaco com um aplicativo. Os smartwatches estão ficando muito populares no mercado e a cada dia com mais funções. Eles estão fugindo do trivial, se integrando melhor com nossos smartphones, alcançando altos patamares de comunicação e em alguns casos obtendo preços extremamente mais acessíveis.
 
 Este projeto visa a integração de sensores de leitura de batimento cardíaco com outras aplicações para que assim a aplicação possa emitir alertas sobre os batimentos do usuário se necessário ou o próprio conseguir pedir ajuda facilmente em caso de emergência. Serão utilizadas tecnologias de desenvolvimento de aplicativos e o código seguirá o paradigma orientado a objetos.
 
@@ -287,11 +287,11 @@ O documento é composto por vários capítulos e segue uma trajetória intuitiva
 \chapter{Descrição do Problema}
 \addcontentsline{arg}{arg}{arg}
 
-Os altos índices de ataques cardíacos são negativamente impressionantes. A cada dia é mais comum chegar em nossas casas e saber que alguém próximo que aparentava perfeita saúde morreu de problemas cardíacos e que ninguém pôde oferecer ajuda a vítima. Não somente a essas pessoas se destina a aplicação mas também a outras pessoas que já têm ciência de seus problemas e precisam constantemente de ajuda.
+Resume-se como problema o fato de diversos seres humanos morrerem de ataques cardíacos sem mesmo saber que tinham problemas de saúde. A cada dia é mais comum chegar em nossas casas e saber que alguém próximo que aparentava perfeita saúde morreu de problemas no coração. Não somente a essas pessoas se destina a aplicação mas também a outras pessoas que já têm ciência de seus problemas e precisam constantemente de ajuda.
 
-O sistema será desenvolvido com um alto foco na usabilidade, que deverá ser um dos diferenciais da aplicação. O usuário poderá acompanhar seus batimentos cardíacos através do aplicativo, cadastrar contatos telefônicos os quais ele poderá disparar alertas de emergência, mensagens customizadas além da possibilidade de ver seu histórico diário. Haverá também um módulo de integração com o smartwatch o qual permitirá que o usuário possa através de poucos toques no visor, disparar alertas de urgência.
+O sistema será desenvolvido com o pensamento focado no usuário destinado. Usabilidade deverá ser o core da aplicação. O usuário poderá acompanhar seus batimentos cardíacos através do aplicativo, cadastrar contatos telefônicos os quais ele poderá disparar alertas, e ver seu histórico. Haverá também um módulo de integração com o smartwatch o qual permitirá que o usuário possa através de poucos toques no visor, disparar alertas de urgência.
 
-Para que o problema seja resolvido e uma solução plausível e realmente útil seja construída, precisará do apoio de pessoas com conhecimentos na área da saúde, que entendam sobre padrões e comportamentos cardíacos e um desenvolvedor de software que ficará responsável por implementar a aplicação baseada nos requisitos.
+Para que o problema seja resolvido e uma solução plausível e realmente útil seja construída, precisará do apoio de pessoas relacionadas com a área da saúde e que entendam padrões de batimentos cardíacos e um desenvolvedor de software que ficará responsável por implementar a aplicação baseada nos requisitos.
 
 Para que a aplicação funcione, algumas regras de negócio devem ser levadas em consideração. Para que a coleta dos dados de batimento cardíaco seja feita, o smartwatch deve estar sempre em contato com a pele do usuário preferencialmente no pulso com seu visor virado para cima. A aplicação não deverá coletar dados que podem ser interpretados como lixo para o usuário ou até mesmo acarretar na dificuldade da visualização de um padrão consistente na tela de exibição de dados. Esses dados armazenados precisarão ser liberados depois de um certo período de tempo ou período de inatividade do usuário.
 
@@ -312,8 +312,8 @@ Para que a aplicação funcione, algumas regras de negócio devem ser levadas em
 % ---
 \chapter{Requisitos}
 \addcontentsline{arg}{arg}{arg}
-Nesta seção serão descritos os requisitos funcionais do sistema, que por sua vez estão representados através do diagrama de caso de uso para fácil abstração das funcionalidades da aplicação, cada caso de uso acompanha um descritivo para entender ainda melhor seu fluxo de funcionamento e por fim os requisitos não funcionais do sistema.
-\section{Diagrama de caso de uso}
+Nesta seção serão descritos os requisitos funcionais do sistema, que por sua vez estão representados por um diagrama de caso de uso para fácil abstração das funcionalidades da aplicação, cada caso de uso acompanha um descritivo para entender ainda melhor seu fluxo de funcionamento e por fim os requisitos não funcionais do sistema.
+\chapter{Diagrama de caso de uso}
 \addcontentsline{arg}{arg}{arg}
 \begin{figure}[h]
 	\label{figure_diagrama_caso_uso}
@@ -321,7 +321,7 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 	\includegraphics[scale=0.6]{UseCase.png}
 	\hfill
 \end{figure}
-\section{Descrição dos casos de uso}
+\chapter{Descrição dos casos de uso}
 \addcontentsline{arg}{arg}{arg}
 %
 \input{use-case-description/manter-mensagens}
@@ -336,7 +336,7 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 %
 \input{use-case-description/criar-conta}
 %
-\section{Requisitos não funcionais}
+\chapter{Requisitos não funcionais}
 \addcontentsline{arg}{arg}{arg}
 %---
 \begin{center}
@@ -400,7 +400,7 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 %
 \begin{figure}[h]	
 	\label{figure_diagrama_sequencia_enviar_alerta_emergencia}
-	\section{Enviar alerta de emergência}
+	\subsection{Enviar alerta de emergência}
 	\caption{ Diagrama de sequência: enviar alerta de emergência }
 	\includegraphics[scale=0.6]{SequenceSmartwatch/Send_Alert.png}
 	\hfill
@@ -434,14 +434,6 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 \end{figure}
 %
 \chapter{Cronograma do projeto}
-\begin{figure}[h]	
-	\label{figure_schedule}	
-	\includegraphics[scale=0.6]{cronograma.png}
-	\caption{ Cronograma do projeto }
-	\hfill
-\end{figure}
-\input{use-case-description/goals}
-
 % ---
 % Conclusão
 % ---
@@ -458,10 +450,8 @@ Nesta seção serão descritos os requisitos funcionais do sistema, que por sua 
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\bibliography{abntex2-modelo-references}
-\cite{forbes-iot}
-\cite{oms-data}
-\cite{pressman}
+\chapter{Referências bibliográficas}
+\addcontentsline{arg}{arg}{arg}
 
 % ----------------------------------------------------------
 % Glossário

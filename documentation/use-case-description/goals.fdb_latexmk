@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1528772572 "goals.tex" "goals.pdf" "goals" 1528772572
+  "/etc/texmf/web2c/texmf.cnf" 1528169176 1101 af7716885e081ab43982cab7b4672c1a ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1528169630 3855832 4a9559cd3e6d2307c493ab1766cb487e ""
+  "goals.aux" 1528772228 8 a94a2480d3289e625eea47cd1b285758 ""
+  "goals.tex" 1528772568 951 ef7bb13fcf800b898aaf9ae573fbaf19 ""
+  (generated)
+  "goals.pdf"
+  "goals.log"
